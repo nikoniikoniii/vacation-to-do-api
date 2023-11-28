@@ -15,10 +15,9 @@ import Rating from "@material-ui/lab/Rating";
 
 import useStyles from "./style";
 const PlaceDetails = ({ place, selected, refProp }) => {
-  const classes = useStyles();
-
   if (selected)
     refProp?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  const classes = useStyles();
 
   return (
     <Card elevation={6}>
@@ -55,9 +54,9 @@ const PlaceDetails = ({ place, selected, refProp }) => {
         </Box>
         {place?.awards?.map((award) => (
           <Box
-            my={1}
             display="flex"
             justifyContent="space-between"
+            my={1}
             alignItems="center"
           >
             <img src={award.images.small} alt={award.display_name} />
